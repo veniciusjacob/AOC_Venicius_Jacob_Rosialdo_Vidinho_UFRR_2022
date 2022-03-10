@@ -1,0 +1,470 @@
+Analysis & Synthesis report for And
+Wed Mar 09 20:04:35 2022
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Wed Mar 09 20:04:35 2022       ;
+; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                   ; And                                         ;
+; Top-level Entity Name           ; Main                                        ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 72                                          ;
+; Total pins                      ; 70                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
+; Top-level entity name                                                           ; Main               ; And                ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                              ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                       ; Library ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------+---------+
+; PAND.vhd                         ; yes             ; User VHDL File  ; D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/PAND.vhd           ;         ;
+; mult2x1.vhd                      ; yes             ; User VHDL File  ; D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/mult2x1.vhd        ;         ;
+; BancReg.vhd                      ; yes             ; User VHDL File  ; D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/BancReg.vhd        ;         ;
+; CounterPC.vhd                    ; yes             ; User VHDL File  ; D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/CounterPC.vhd      ;         ;
+; Ext2x8.vhd                       ; yes             ; User VHDL File  ; D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/Ext2x8.vhd         ;         ;
+; Ext4x8.vhd                       ; yes             ; User VHDL File  ; D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/Ext4x8.vhd         ;         ;
+; MRam.vhd                         ; yes             ; User VHDL File  ; D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/MRam.vhd           ;         ;
+; MRom.vhd                         ; yes             ; User VHDL File  ; D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/MRom.vhd           ;         ;
+; ProgramCounter.vhd               ; yes             ; User VHDL File  ; D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/ProgramCounter.vhd ;         ;
+; UniControle.vhd                  ; yes             ; User VHDL File  ; D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/UniControle.vhd    ;         ;
+; DivInstru.vhd                    ; yes             ; User VHDL File  ; D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/DivInstru.vhd      ;         ;
+; TempZero.vhd                     ; yes             ; User VHDL File  ; D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/TempZero.vhd       ;         ;
+; ALU.vhd                          ; yes             ; User VHDL File  ; D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/ALU.vhd            ;         ;
+; Main.vhd                         ; yes             ; User VHDL File  ; D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/Main.vhd           ;         ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimate of Logic utilization (ALMs needed) ; 117         ;
+;                                             ;             ;
+; Combinational ALUT usage for logic          ; 150         ;
+;     -- 7 input functions                    ; 5           ;
+;     -- 6 input functions                    ; 51          ;
+;     -- 5 input functions                    ; 21          ;
+;     -- 4 input functions                    ; 24          ;
+;     -- <=3 input functions                  ; 49          ;
+;                                             ;             ;
+; Dedicated logic registers                   ; 72          ;
+;                                             ;             ;
+; I/O pins                                    ; 70          ;
+;                                             ;             ;
+; Total DSP Blocks                            ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; Clock~input ;
+; Maximum fan-out                             ; 72          ;
+; Total fan-out                               ; 1118        ;
+; Average fan-out                             ; 3.09        ;
++---------------------------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                               ;
++--------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------+----------------+--------------+
+; Compilation Hierarchy Node                 ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                         ; Entity Name    ; Library Name ;
++--------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------+----------------+--------------+
+; |Main                                      ; 150 (0)             ; 72 (0)                    ; 0                 ; 0          ; 70   ; 0            ; |Main                                       ; Main           ; work         ;
+;    |ALU:port_map_alu|                      ; 58 (58)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Main|ALU:port_map_alu                      ; ALU            ; work         ;
+;    |BancReg:port_map_banco_registradores|  ; 21 (21)             ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |Main|BancReg:port_map_banco_registradores  ; BancReg        ; work         ;
+;    |CounterPC:port_map_somador_pc|         ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Main|CounterPC:port_map_somador_pc         ; CounterPC      ; work         ;
+;    |MRam:port_map_memoria_ram|             ; 20 (20)             ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |Main|MRam:port_map_memoria_ram             ; MRam           ; work         ;
+;    |MRom:port_map_memoria_rom|             ; 21 (21)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Main|MRom:port_map_memoria_rom             ; MRom           ; work         ;
+;    |ProgramCounter:port_map_pc|            ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |Main|ProgramCounter:port_map_pc            ; ProgramCounter ; work         ;
+;    |UniControle:port_map_unidade_controle| ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Main|UniControle:port_map_unidade_controle ; UniControle    ; work         ;
+;    |mult2x1:port_map_mul_2to1_jump|        ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Main|mult2x1:port_map_mul_2to1_jump        ; mult2x1        ; work         ;
+;    |mult2x1:port_map_mul_2to1_ram_alu|     ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Main|mult2x1:port_map_mul_2to1_ram_alu     ; mult2x1        ; work         ;
++--------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------+----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                          ;
++----------------------------------------------------+--------------------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal            ; Free of Timing Hazards ;
++----------------------------------------------------+--------------------------------+------------------------+
+; ALU:port_map_alu|Overflow                          ; MRom:port_map_memoria_rom|Mux0 ; yes                    ;
+; ALU:port_map_alu|Zero                              ; ALU:port_map_alu|Mux0          ; yes                    ;
+; ALU:port_map_alu|in_TempZero                       ; ALU:port_map_alu|Mux2          ; yes                    ;
+; Number of user-specified and inferred latches = 3  ;                                ;                        ;
++----------------------------------------------------+--------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++-------------------------------------------------------------+
+; Registers Removed During Synthesis                          ;
++----------------------------------------+--------------------+
+; Register name                          ; Reason for Removal ;
++----------------------------------------+--------------------+
+; MRam:port_map_memoria_ram|M_Ram~44     ; Lost fanout        ;
+; MRam:port_map_memoria_ram|M_Ram~45     ; Lost fanout        ;
+; MRam:port_map_memoria_ram|M_Ram~46     ; Lost fanout        ;
+; MRam:port_map_memoria_ram|M_Ram~47     ; Lost fanout        ;
+; MRam:port_map_memoria_ram|M_Ram~48     ; Lost fanout        ;
+; MRam:port_map_memoria_ram|M_Ram~49     ; Lost fanout        ;
+; MRam:port_map_memoria_ram|M_Ram~50     ; Lost fanout        ;
+; MRam:port_map_memoria_ram|M_Ram~51     ; Lost fanout        ;
+; MRam:port_map_memoria_ram|M_Ram~52     ; Lost fanout        ;
+; MRam:port_map_memoria_ram|M_Ram~53     ; Lost fanout        ;
+; MRam:port_map_memoria_ram|M_Ram~54     ; Lost fanout        ;
+; MRam:port_map_memoria_ram|M_Ram~55     ; Lost fanout        ;
+; MRam:port_map_memoria_ram|M_Ram~56     ; Lost fanout        ;
+; MRam:port_map_memoria_ram|M_Ram~57     ; Lost fanout        ;
+; MRam:port_map_memoria_ram|M_Ram~58     ; Lost fanout        ;
+; MRam:port_map_memoria_ram|M_Ram~59     ; Lost fanout        ;
+; MRam:port_map_memoria_ram|M_Ram~60     ; Lost fanout        ;
+; MRam:port_map_memoria_ram|M_Ram~61     ; Lost fanout        ;
+; MRam:port_map_memoria_ram|M_Ram~62     ; Lost fanout        ;
+; MRam:port_map_memoria_ram|M_Ram~63     ; Lost fanout        ;
+; MRam:port_map_memoria_ram|M_Ram~64     ; Lost fanout        ;
+; MRam:port_map_memoria_ram|M_Ram~65     ; Lost fanout        ;
+; MRam:port_map_memoria_ram|M_Ram~66     ; Lost fanout        ;
+; MRam:port_map_memoria_ram|M_Ram~67     ; Lost fanout        ;
+; MRam:port_map_memoria_ram|M_Ram~68     ; Lost fanout        ;
+; MRam:port_map_memoria_ram|M_Ram~69     ; Lost fanout        ;
+; MRam:port_map_memoria_ram|M_Ram~70     ; Lost fanout        ;
+; MRam:port_map_memoria_ram|M_Ram~71     ; Lost fanout        ;
+; MRam:port_map_memoria_ram|M_Ram~72     ; Lost fanout        ;
+; MRam:port_map_memoria_ram|M_Ram~73     ; Lost fanout        ;
+; MRam:port_map_memoria_ram|M_Ram~74     ; Lost fanout        ;
+; MRam:port_map_memoria_ram|M_Ram~75     ; Lost fanout        ;
+; Total Number of Removed Registers = 32 ;                    ;
++----------------------------------------+--------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 72    ;
+; Number of registers using Synchronous Clear  ; 32    ;
+; Number of registers using Synchronous Load   ; 32    ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 64    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |Main|ProgramCounter:port_map_pc|saida[6] ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 24 LEs               ; 16 LEs                 ; No         ; |Main|ALU:port_map_alu|Mux11              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 72                          ;
+;     ENA               ; 32                          ;
+;     ENA SCLR SLD      ; 32                          ;
+;     plain             ; 8                           ;
+; arriav_lcell_comb     ; 154                         ;
+;     arith             ; 27                          ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 9                           ;
+;         3 data inputs ; 12                          ;
+;         5 data inputs ; 4                           ;
+;     extend            ; 5                           ;
+;         7 data inputs ; 5                           ;
+;     normal            ; 122                         ;
+;         1 data inputs ; 4                           ;
+;         2 data inputs ; 14                          ;
+;         3 data inputs ; 12                          ;
+;         4 data inputs ; 24                          ;
+;         5 data inputs ; 17                          ;
+;         6 data inputs ; 51                          ;
+; boundary_port         ; 70                          ;
+;                       ;                             ;
+; Max LUT depth         ; 7.70                        ;
+; Average LUT depth     ; 5.06                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Wed Mar 09 20:04:22 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off And -c And
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file pand.vhd
+    Info (12022): Found design unit 1: PAND-behavior File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/PAND.vhd Line: 12
+    Info (12023): Found entity 1: PAND File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/PAND.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file mult2x1.vhd
+    Info (12022): Found design unit 1: mult2x1-behavior File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/mult2x1.vhd Line: 13
+    Info (12023): Found entity 1: mult2x1 File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/mult2x1.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file bancreg.vhd
+    Info (12022): Found design unit 1: BancReg-Behavior File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/BancReg.vhd Line: 17
+    Info (12023): Found entity 1: BancReg File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/BancReg.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file counterpc.vhd
+    Info (12022): Found design unit 1: CounterPC-Behavior File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/CounterPC.vhd Line: 14
+    Info (12023): Found entity 1: CounterPC File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/CounterPC.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file ext2x8.vhd
+    Info (12022): Found design unit 1: Ext2x8-behavior File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/Ext2x8.vhd Line: 11
+    Info (12023): Found entity 1: Ext2x8 File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/Ext2x8.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file ext4x8.vhd
+    Info (12022): Found design unit 1: Ext4x8-behavior File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/Ext4x8.vhd Line: 12
+    Info (12023): Found entity 1: Ext4x8 File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/Ext4x8.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file mram.vhd
+    Info (12022): Found design unit 1: MRam-behavior File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/MRam.vhd Line: 15
+    Info (12023): Found entity 1: MRam File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/MRam.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file mrom.vhd
+    Info (12022): Found design unit 1: MRom-Behavior File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/MRom.vhd Line: 14
+    Info (12023): Found entity 1: MRom File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/MRom.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file programcounter.vhd
+    Info (12022): Found design unit 1: ProgramCounter-Behavior File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/ProgramCounter.vhd Line: 13
+    Info (12023): Found entity 1: ProgramCounter File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/ProgramCounter.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file unicontrole.vhd
+    Info (12022): Found design unit 1: UniControle-Behavior File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/UniControle.vhd Line: 15
+    Info (12023): Found entity 1: UniControle File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/UniControle.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file divinstru.vhd
+    Info (12022): Found design unit 1: DivInstru-Behavior File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/DivInstru.vhd Line: 14
+    Info (12023): Found entity 1: DivInstru File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/DivInstru.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file tempzero.vhd
+    Info (12022): Found design unit 1: TempZero-Behavior File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/TempZero.vhd Line: 12
+    Info (12023): Found entity 1: TempZero File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/TempZero.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file alu.vhd
+    Info (12022): Found design unit 1: ALU-Behavior File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/ALU.vhd Line: 18
+    Info (12023): Found entity 1: ALU File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/ALU.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file main.vhd
+    Info (12022): Found design unit 1: Main-Behavior File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/Main.vhd Line: 22
+    Info (12023): Found entity 1: Main File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/Main.vhd Line: 4
+Info (12127): Elaborating entity "Main" for the top level hierarchy
+Info (12128): Elaborating entity "CounterPC" for hierarchy "CounterPC:port_map_somador_pc" File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/Main.vhd Line: 187
+Warning (10492): VHDL Process Statement warning at CounterPC.vhd(18): signal "entrada" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/CounterPC.vhd Line: 18
+Info (12128): Elaborating entity "ProgramCounter" for hierarchy "ProgramCounter:port_map_pc" File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/Main.vhd Line: 189
+Info (12128): Elaborating entity "MRom" for hierarchy "MRom:port_map_memoria_rom" File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/Main.vhd Line: 191
+Info (12128): Elaborating entity "DivInstru" for hierarchy "DivInstru:port_map_divisao_instrucao" File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/Main.vhd Line: 193
+Info (12128): Elaborating entity "UniControle" for hierarchy "UniControle:port_map_unidade_controle" File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/Main.vhd Line: 195
+Warning (10492): VHDL Process Statement warning at UniControle.vhd(19): signal "OpCode" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/UniControle.vhd Line: 19
+Info (12128): Elaborating entity "BancReg" for hierarchy "BancReg:port_map_banco_registradores" File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/Main.vhd Line: 197
+Warning (10492): VHDL Process Statement warning at BancReg.vhd(29): signal "Reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/BancReg.vhd Line: 29
+Warning (10492): VHDL Process Statement warning at BancReg.vhd(29): signal "ReadReg1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/BancReg.vhd Line: 29
+Warning (10492): VHDL Process Statement warning at BancReg.vhd(30): signal "Reg" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/BancReg.vhd Line: 30
+Warning (10492): VHDL Process Statement warning at BancReg.vhd(30): signal "ReadReg2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/BancReg.vhd Line: 30
+Info (12128): Elaborating entity "Ext2x8" for hierarchy "Ext2x8:port_map_extensor_sinal_2_8" File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/Main.vhd Line: 199
+Info (12128): Elaborating entity "mult2x1" for hierarchy "mult2x1:port_map_mul_2to1_br_alu" File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/Main.vhd Line: 201
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:port_map_alu" File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/Main.vhd Line: 203
+Warning (10492): VHDL Process Statement warning at ALU.vhd(52): signal "result_adder" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/ALU.vhd Line: 52
+Warning (10492): VHDL Process Statement warning at ALU.vhd(53): signal "temp_overflow_adder" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/ALU.vhd Line: 53
+Warning (10492): VHDL Process Statement warning at ALU.vhd(56): signal "result_sub" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/ALU.vhd Line: 56
+Warning (10492): VHDL Process Statement warning at ALU.vhd(57): signal "temp_overflow_sub" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/ALU.vhd Line: 57
+Warning (10492): VHDL Process Statement warning at ALU.vhd(64): signal "out_TempZero" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/ALU.vhd Line: 64
+Warning (10492): VHDL Process Statement warning at ALU.vhd(72): signal "out_TempZero" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/ALU.vhd Line: 72
+Warning (10631): VHDL Process Statement warning at ALU.vhd(43): inferring latch(es) for signal or variable "Overflow", which holds its previous value in one or more paths through the process File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/ALU.vhd Line: 43
+Warning (10631): VHDL Process Statement warning at ALU.vhd(43): inferring latch(es) for signal or variable "Zero", which holds its previous value in one or more paths through the process File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/ALU.vhd Line: 43
+Warning (10631): VHDL Process Statement warning at ALU.vhd(43): inferring latch(es) for signal or variable "in_TempZero", which holds its previous value in one or more paths through the process File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/ALU.vhd Line: 43
+Info (10041): Inferred latch for "in_TempZero" at ALU.vhd(43) File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/ALU.vhd Line: 43
+Info (10041): Inferred latch for "Zero" at ALU.vhd(43) File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/ALU.vhd Line: 43
+Info (10041): Inferred latch for "Overflow" at ALU.vhd(43) File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/ALU.vhd Line: 43
+Info (12128): Elaborating entity "TempZero" for hierarchy "ALU:port_map_alu|TempZero:port_map_TempZero" File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/ALU.vhd Line: 38
+Info (12128): Elaborating entity "MRam" for hierarchy "MRam:port_map_memoria_ram" File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/Main.vhd Line: 205
+Warning (10492): VHDL Process Statement warning at MRam.vhd(27): signal "MemRead" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/MRam.vhd Line: 27
+Warning (10492): VHDL Process Statement warning at MRam.vhd(28): signal "M_Ram" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/MRam.vhd Line: 28
+Warning (10492): VHDL Process Statement warning at MRam.vhd(28): signal "Address" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/MRam.vhd Line: 28
+Info (12128): Elaborating entity "Ext4x8" for hierarchy "Ext4x8:port_map_extensor_sinal_4_8" File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/Main.vhd Line: 209
+Info (12128): Elaborating entity "PAND" for hierarchy "PAND:port_map_and_gate" File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/Main.vhd Line: 211
+Info (276014): Found 2 instances of uninferred RAM logic
+    Info (276007): RAM logic "MRam:port_map_memoria_ram|M_Ram" is uninferred due to asynchronous read logic File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/MRam.vhd Line: 17
+    Info (276004): RAM logic "BancReg:port_map_banco_registradores|Reg" is uninferred due to inappropriate RAM size File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/BancReg.vhd Line: 19
+Warning (13012): Latch ALU:port_map_alu|Overflow has unsafe behavior File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/ALU.vhd Line: 14
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ProgramCounter:port_map_pc|saida[4] File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/ProgramCounter.vhd Line: 17
+Warning (13012): Latch ALU:port_map_alu|Zero has unsafe behavior File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/ALU.vhd Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ProgramCounter:port_map_pc|saida[4] File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/ProgramCounter.vhd Line: 17
+Warning (13012): Latch ALU:port_map_alu|in_TempZero has unsafe behavior File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/ALU.vhd Line: 28
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ProgramCounter:port_map_pc|saida[7] File: D:/Home/Downloads/AOC (1) 08-03/Projeto OAC/And/ProgramCounter.vhd Line: 17
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 32 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 284 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 1 input pins
+    Info (21059): Implemented 69 output pins
+    Info (21061): Implemented 214 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 25 warnings
+    Info: Peak virtual memory: 4846 megabytes
+    Info: Processing ended: Wed Mar 09 20:04:35 2022
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:28
+
+
