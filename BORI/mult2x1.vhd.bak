@@ -1,0 +1,8 @@
+--mult2x1
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+ENTITY mult2x1 IS
+PORT(
+	P  : IN std_logic;
+);

@@ -1,0 +1,14 @@
+-- Unidade de Controle
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+ENTITY UniControl IS
+PORT (
+	Clock	   : IN std_logic;
+	OpCode   : IN std_logic_vector (3 DOWNTO 0);
+	Jump, Branch, MemRead, MemtoReg : std_logic;
+	ALUOp    : OUT std_logic_vector (2 DOWNTO 0);
+	
+	MemWrite, ALUSrc, RegWrite : OUT std_logic
+);
+END UniControle;
