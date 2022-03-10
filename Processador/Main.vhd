@@ -3,18 +3,18 @@ USE ieee.std_logic_1164.all;
 
 ENTITY Main IS
 	PORT (
-		Clock : IN STD_LOGIC;
-    	out_out_pc : OUT STD_LOGIC_VECTOR (7 DOWNTO 0);
-    	out_out_rom : OUT STD_LOGIC_VECTOR (7 DOWNTO 0);
-    	out_opcode : OUT STD_LOGIC_VECTOR (3 DOWNTO 0);
-    	out_rs : OUT STD_LOGIC_VECTOR (1 DOWNTO 0);
-    	out_rt : OUT STD_LOGIC_VECTOR (1 DOWNTO 0);
-    	out_endereco : OUT STD_LOGIC_VECTOR (3 DOWNTO 0);
-    	out_out_br_reg_A : OUT STD_LOGIC_VECTOR (7 DOWNTO 0);
-    	out_out_br_reg_B : OUT STD_LOGIC_VECTOR (7 DOWNTO 0);
-    	out_out_alu_result : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
-    	out_out_overflow : OUT STD_LOGIC;
-    	out_out_memoria_ram : OUT STD_LOGIC_VECTOR (7 DOWNTO 0);
+	Clock 		 	 : IN STD_LOGIC;
+    	out_out_pc 	 	 : OUT STD_LOGIC_VECTOR (7 DOWNTO 0);
+    	out_out_rom 	 	 : OUT STD_LOGIC_VECTOR (7 DOWNTO 0);
+    	out_opcode 	 	 : OUT STD_LOGIC_VECTOR (3 DOWNTO 0);
+    	out_rs 		 	 : OUT STD_LOGIC_VECTOR (1 DOWNTO 0);
+    	out_rt 		 	 : OUT STD_LOGIC_VECTOR (1 DOWNTO 0);
+    	out_endereco 	 	 : OUT STD_LOGIC_VECTOR (3 DOWNTO 0);
+    	out_out_br_reg_A 	 : OUT STD_LOGIC_VECTOR (7 DOWNTO 0);
+    	out_out_br_reg_B	 : OUT STD_LOGIC_VECTOR (7 DOWNTO 0);
+    	out_out_alu_result 	 : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+    	out_out_overflow	 : OUT STD_LOGIC;
+    	out_out_memoria_ram 	 : OUT STD_LOGIC_VECTOR (7 DOWNTO 0);
     	out_out_mul_2to1_ram_alu : OUT STD_LOGIC_VECTOR (7 DOWNTO 0)
 	);
 END Main;
