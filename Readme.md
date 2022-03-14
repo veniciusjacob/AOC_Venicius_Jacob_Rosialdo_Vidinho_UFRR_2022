@@ -9,8 +9,7 @@
 </h1>
   
   <p align="center">
-    Este é um projeto de um processador de 8 bits, com arquitetura RISC, baseado no processador MIPS.
-    Ele foi desenvolvido na IDE Quartus Prime, da Intel.
+    Esse projeto apresenta os componentes e relatorios de como foi realizado o processo de construção desse processador
     <br />
     <br />
 
