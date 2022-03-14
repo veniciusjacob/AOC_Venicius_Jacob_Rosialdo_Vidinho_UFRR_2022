@@ -10,6 +10,7 @@
   
   <p align="center">
   Repositório que apresenta os componentes e relatórios do projeto final da disciplina de Arquietetura e Organização de Computadores(AOC).
+    <br />
   Alunos: Venícius Jacob Pereira de Oliveira, Rosialdo Queivisone
     <br />
     <br />
