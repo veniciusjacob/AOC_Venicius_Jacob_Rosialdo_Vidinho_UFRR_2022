@@ -9,7 +9,8 @@
 </h1>
   
   <p align="center">
-    Esse projeto apresenta os componentes e relatorios de informando como foi realizado o processo de construção desse processador
+    Esse projeto apresenta os componentes e relatorios informando como foi realizado o processo de construção desse processador
     <br />
+  
     <br />
 
