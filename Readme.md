@@ -9,7 +9,7 @@
 </h1>
   
   <p align="center">
-    Esse projeto apresenta os componentes e relatorios informando como foi realizado o processo de construção desse processador
+  Repositório que apresenta os componentes e relatórios do projeto final da disciplina de Arquietetura e Organização de Computadores
     <br />
     <br />
 
