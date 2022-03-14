@@ -11,27 +11,6 @@
     Ele foi desenvolvido na IDE Quartus Prime, da Intel.
     <br />
     <br />
-    <a href=" ">Relatório</a>
-    |
-    <a href=" ">Slides</a>
-    |
-    <a href=" ">Processador</a>
-  </p>
-  
-  <h2 align="center">Datapath da CPU EK</h2>
-  <p align="center">
-    <a href="">
-      <img src=" " alt="Datapath Processador EK">
-    </a>
-  </p>
-  
-  <h2 align="center">Especificações da IDE Quartus Prime</h2>
-  <p align="center">
-    <a href="">
-      <img src="" alt="Especificações da IDE Quartus">
-    </a>
-  </p>
-</p>
 
 ## Como executar o projeto da CPU EK?
 
